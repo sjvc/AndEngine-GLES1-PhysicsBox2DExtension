@@ -1,8 +1,7 @@
-apply plugin: 'android-library'
+apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 17
-    buildToolsVersion "19.1.0"
+    compileSdkVersion 25
 
     defaultConfig {
         minSdkVersion 9
@@ -30,10 +29,10 @@ android {
             assets.srcDirs = ['assets']
         }
 
-        instrumentTest.setRoot('tests')
+        // instrumentTest.setRoot('tests')
     }
 }
 
 dependencies {
-    compile project(':andEngine')
+    implementation project(':andEngine')
 }
